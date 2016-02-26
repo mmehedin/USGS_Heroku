@@ -17,7 +17,7 @@ var users = require('./routes/users');
 var db_eq = monk('localhost:27017/usgs_all');
 
 var app = express();
-console.log('app');
+//console.log('app');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -38,10 +38,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-console.log('app2');
+//console.log('app2');
 //adding the paths to routes and mongo
 app.get('/', controller.home);
-console.log('app3');
+//console.log('app3');
 app.get('/insert', controller.insert);
 app.get('/name', controller.modelName);
 
