@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('./node_modules/mongoose/lib');
 var monk = require('monk');
 
-var uri = 'mongodb://localhost/mongoose-shared-connection';
+//var uri = 'mongodb://localhost/mongoose-shared-connection';
+var uri = 'mongodb://<dbuser>:<dbpassword>@ds017678.mlab.com:17678/usgs_all';
 global.db = mongoose.createConnection(uri);
 var controller = require('./controllers/controller');
 var routes = require('./routes/index');
@@ -15,7 +16,8 @@ var users = require('./routes/users');
 
 //connect to the db
 //var db_eq = monk('localhost:27017/usgs_all');
-var db_eq = monk('localhost/usgs_all');
+//var db_eq = monk('localhost/usgs_all');
+var db_eq = monk('mongodb://<dbuser>:<dbpassword>@ds017678.mlab.com:17678/usgs_all');
 var app = express();
 //console.log('app');
 // view engine setup
