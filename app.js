@@ -14,8 +14,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 //connect to the db
-var db_eq = monk('localhost:27017/usgs_all');
-
+//var db_eq = monk('localhost:27017/usgs_all');
+var db_eq = monk('localhost/usgs_all');
 var app = express();
 //console.log('app');
 // view engine setup
